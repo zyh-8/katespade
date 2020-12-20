@@ -1,0 +1,112 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* 自动换行 shift+alt+F */
+
+html,
+body,
+div,
+p,
+ul,
+ol,
+li,
+dl,
+dd,
+a,
+form,
+input,
+select,
+option,
+label,
+textarea,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+span,
+i,
+em,
+b,
+strong,
+img,
+table,
+tr,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+em,
+i {
+    font-size: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong {
+    font-weight: normal;
+}
+
+
+/* img {
+    display: block;
+} */
+
+
+/* 单行文本溢出 */
+
+.yh {
+    width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+/* 多行文本溢出 */
+
+
+/* .dh {
+    width: 200px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+} */
+
+.clearFix:after {
+    content: "";
+    clear: both;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+html,
+body {
+    height: 100%;
+}

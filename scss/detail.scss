@@ -1,0 +1,681 @@
+body {
+    height: 100%;
+    // background: rgb(252, 239, 243);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+//滚动条
+ ::-webkit-scrollbar {
+    width: 4px;
+    height: 2px;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: #000;
+}
+
+// header
+.header {
+    width: 100%;
+    height: 155px;
+    .header_wrapper {
+        //mobile
+        .header-mobile {
+            display: none;
+        }
+        //pc
+        .header-pc {
+            display: block;
+            height: 155px;
+            width: 100%;
+            background-color: rgb(252, 239, 243);
+            .pc_header_top {
+                // background-color: skyblue;
+                padding: 0 37px;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 95px;
+                .header_top_left {
+                    .search-store {
+                        font-size: 12px;
+                        cursor: pointer;
+                        color: #223628;
+                        top: 20px;
+                    }
+                }
+                .header_top_logo {
+                    width: 130px;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .header_top_right {
+                    height: 100%;
+                    width: 60px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    a {
+                        color: #000;
+                        text-decoration: none;
+                    }
+                    .icon-personal {
+                        font-size: 20px;
+                        cursor: pointer;
+                    }
+                    .icon-gouwu {
+                        font-size: 30px;
+                        cursor: pointer;
+                    }
+                }
+            }
+            .pc_header_bottom {
+                height: 60px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                overflow: hidden;
+                // background-color: gray;
+                .menu {
+                    // width: 700px;
+                    .menu_wrapper {
+                        display: flex;
+                        align-items: center;
+                        align-content: center;
+                        justify-content: space-between;
+                        .menu_wrapper_link {
+                            position: relative;
+                            // background-color: red;
+                            line-height: 42px;
+                            padding-right: 40px;
+                            a {
+                                text-decoration: none;
+                                font-size: 14px;
+                                color: #395037;
+                                // background-color: blue;
+                            }
+                            .active {
+                                border-bottom-style: solid;
+                                border-bottom-color: rgb(248, 186, 202);
+                                border-bottom-width: 3px;
+                            }
+                            // 二级菜单
+                            .menu-sublevel {
+                                background: #f8baca;
+                                // background-color: blue;
+                                text-align: center;
+                                padding: 35px 0;
+                                position: absolute;
+                                z-index: 90;
+                                left: 0;
+                                width: 100%;
+                                height: 350px;
+                                top: 100px;
+                                .menu-sublevel__subCategories {
+                                    width: 350px;
+                                    display: inline-block;
+                                    position: relative;
+                                    .menu-sublevel-link {
+                                        width: 120px;
+                                        line-height: 15px;
+                                        padding-top: 5px;
+                                        margin-bottom: 13px;
+                                        text-align: left;
+                                        font-size: 11px;
+                                    }
+                                    .menu-sublevel-pic {
+                                        position: absolute;
+                                        top: 0;
+                                        left: 60%;
+                                        width: 180px;
+                                        .menu-sublevel-pic-wrap {
+                                            text-align: center;
+                                            margin-right: 30px;
+                                            img {
+                                                width: 180px;
+                                                height: 250px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .search {
+                    width: 50px;
+                    cursor: pointer;
+                    position: absolute;
+                    right: 37px;
+                    bottom: 18px;
+                    .search_btn {
+                        width: 60px;
+                        font-size: 12px;
+                        line-height: 18px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        .icon-sousuo {
+                            width: 18px;
+                            height: 18px;
+                            margin-left: 8px;
+                        }
+                    }
+                }
+            }
+            .searchBox {
+                width: 100%;
+                height: 300px;
+                position: absolute;
+                display: none;
+                z-index: 10000;
+                .inner-box {
+                    border: 1px solid #223628;
+                    background: #fceff3;
+                    box-sizing: border-box;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    .select {
+                        height: 100%;
+                        width: 95%;
+                        border: 0;
+                        outline: 0;
+                        vertical-align: middle;
+                        background-color: #fceff3;
+                        font-size: 14px;
+                        text-align: left;
+                        padding-left: 45px;
+                        padding-right: 65px;
+                    }
+                    .searchBtn {
+                        // box-sizing: border-box;
+                        width: 5%;
+                        height: 42px;
+                        background: #223628;
+                        cursor: pointer;
+                        border: 0;
+                        outline: 0;
+                        .icon-sousuo {
+                            color: white;
+                        }
+                    }
+                }
+                .search-form-content {
+                    position: absolute;
+                    overflow: auto;
+                    left: 0;
+                    width: 100%;
+                    background: #f8baca;
+                    .component-search-recommand {
+                        padding: 32px 48px 34px;
+                        .component-search-recommand__title {
+                            font-size: 18px;
+                            margin-bottom: 20px;
+                        }
+                        .component-search-recommand__content {
+                            font-size: 12px;
+                            .component-search-recommand__content-item {
+                                margin-top: 10px;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 商品详情
+.product-detail-container {
+    padding-left: 114px;
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    .top {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: row;
+        .left {
+            overflow: hidden;
+            margin-right: 30px;
+            .component-product-imgaes-swiper {
+                position: relative;
+                .swiper-pc {
+                    height: 490px;
+                    width: 57px;
+                    position: relative;
+                    cursor: pointer;
+                    overflow: hidden;
+                    list-style: none;
+                    padding: 0;
+                    z-index: 1;
+                    margin-left: auto;
+                    margin-right: auto;
+                    .swiper-wrapper {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 1;
+                        display: flex;
+                        transition-property: transform;
+                        box-sizing: content-box;
+                        flex-direction: column;
+                        .swiper-slide {
+                            width: 57px;
+                            height: 72px!important;
+                            margin-bottom: 10px;
+                            flex-shrink: 0;
+                            position: relative;
+                            transition-property: transform;
+                            img {
+                                height: 74px;
+                                width: 57px;
+                            }
+                        }
+                        .swiper-notification {}
+                    }
+                }
+            }
+        }
+        .sidebar {
+            width: 490px;
+            height: 650px;
+            border: 1px solid #eee;
+            position: relative;
+            .magnifier-box {
+                width: 490px;
+                height: 650px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                position: relative;
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+                .mouse-cover {
+                    width: 245px;
+                    height: 325px;
+                    display: none;
+                    position: absolute;
+                    background-color: rgba(0, 0, 0, .5);
+                    cursor: move;
+                }
+            }
+            .icon-add {
+                width: 22px;
+                height: 22px;
+                position: absolute;
+                right: 15px;
+                top: 15px;
+                z-index: 2;
+            }
+            .mouse-cover-canvas {
+                position: absolute;
+                height: 650px;
+                width: 490px;
+                right: -500px;
+                top: 0px;
+                background-size: 970px 1300px;
+                background-position: 0 0;
+                background-repeat: no-repeat;
+                border: 1px solid #ccc;
+                background-image: url(https://img.katespade.cn/media/catalog/product/cache/6cf5bfa75f176e0aa25e03164e60d931/n/j/njm00120001_a_1.jpg);
+                z-index: 99999999;
+                display: block;
+            }
+        }
+        .main-are {
+            .select-product {
+                width: 370px;
+                padding-left: 53px;
+                margin-right: 50px;
+                margin-top: 0;
+                .title {
+                    line-height: 32px;
+                    color: #223628;
+                    font-size: 24px;
+                }
+                .price-are {
+                    display: flex;
+                    flex-direction: row;
+                    font-size: 16px;
+                    padding-top: 12px;
+                    .now-price {
+                        color: #223628;
+                    }
+                }
+                .huabei {
+                    font-size: 12px;
+                    color: #48756a;
+                    padding-top: 5px;
+                }
+                .preOrder {
+                    padding-top: 5px;
+                    font-size: 12px;
+                    color: #df1d63;
+                }
+                .reminder {
+                    padding-top: 8px;
+                }
+                .product-color {
+                    padding-top: 30px;
+                    .color-value {
+                        font-size: 14px;
+                        color: #223628;
+                    }
+                }
+                .product-size {
+                    padding-top: 25px;
+                    .size-word {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        .title {
+                            font-size: 14px;
+                            color: #223628;
+                            line-height: 32px;
+                        }
+                        .guide {
+                            padding-right: 8px;
+                            cursor: pointer;
+                            font-size: 12px;
+                            color: #48756a;
+                            text-decoration: underline;
+                        }
+                    }
+                    .size-content {
+                        font-size: 12px;
+                        display: flex;
+                        justify-content: flex-start;
+                        flex-wrap: wrap;
+                        .size-card {
+                            width: 36px;
+                            height: 36px;
+                            line-height: 36px;
+                            margin-right: 8px;
+                            margin-bottom: 8px;
+                            overflow: hidden;
+                            cursor: pointer;
+                            font-size: 20px;
+                            color: #223628;
+                            border: 1px solid #b5cec9;
+                            text-align: center;
+                            position: relative;
+                        }
+                        .no-thing {
+                            color: #b5cec9;
+                            background: linear-gradient(135deg, transparent 49.5%, #b5cec9 0, #b5cec9 50.5%, transparent 0);
+                        }
+                        .is-select {
+                            color: #fff!important;
+                            background-color: #223628!important;
+                        }
+                    }
+                }
+                .operate {
+                    margin-top: 40px;
+                    div {
+                        cursor: pointer;
+                        height: 44px;
+                        line-height: 42px;
+                        text-align: center;
+                    }
+                    .buy {
+                        color: #fff;
+                        background-color: #223628;
+                        border: 1px solid #223628;
+                    }
+                    .add {
+                        color: #223628;
+                        background-color: #fff;
+                        border: 1px solid #223628;
+                        margin-top: 10px;
+                    }
+                }
+                .product-share {
+                    padding-top: 28px;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    .title {
+                        font-size: 14px;
+                        color: #223628;
+                        line-height: 32px;
+                    }
+                    .icon-wechat {
+                        width: 28px;
+                        height: 28px;
+                        cursor: pointer;
+                        padding-left: 8px;
+                    }
+                    .icon-xinlang {
+                        height: 28px;
+                        cursor: pointer;
+                        padding-left: 15px;
+                    }
+                }
+                // 尺寸指南
+                .size-dialog {
+                    .dialog-container {
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        overflow: hidden;
+                        z-index: 2001;
+                        background: rgba(0, 0, 0, .6);
+                        .size-guide {
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+                            .size-guide-content {
+                                width: auto;
+                                max-height: 650px;
+                                position: relative;
+                                margin: 0 auto;
+                                overflow: auto;
+                                .size-dialog__close {
+                                    width: 20px;
+                                    height: 20px;
+                                    position: absolute;
+                                    top: 10px;
+                                    right: 10px;
+                                    cursor: pointer;
+                                }
+                                img {
+                                    width: 100%;
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .center {
+        padding-top: 30px;
+        .product-infor {
+            .pruduct-detail {
+                width: 778px;
+                padding-top: 40px;
+                padding-left: 0;
+                padding-right: 0;
+                box-sizing: border-box;
+                .content {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    .title {
+                        font-size: 16px;
+                        color: #223628;
+                    }
+                    .icon {
+                        width: 22px;
+                        height: 16px;
+                        cursor: pointer;
+                    }
+                }
+                .dropdown {
+                    font-size: 14px;
+                    overflow: hidden;
+                    transition: height .1s;
+                    color: #223628;
+                    // display: none;
+                    .description-dropdown {
+                        padding-top: 20px;
+                    }
+                    p {
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+    .bottom {
+        padding-top: 70px;
+        padding-bottom: 80px;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        .own-advantage {
+            width: 1030px;
+            .title {
+                font-size: 20px;
+                text-align: center;
+                color: #223628;
+            }
+            .content {
+                padding-top: 40px;
+                display: flex;
+                justify-content: space-around;
+                .feature {
+                    text-align: center;
+                    .icon {
+                        width: 54px;
+                        height: 54px;
+                    }
+                    .text {
+                        font-size: 16px;
+                        color: #000;
+                    }
+                }
+            }
+            .content-bottom {
+                display: none;
+                padding-top: 40px;
+                padding-left: 0;
+                padding-right: 0;
+                .flex-one {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                }
+            }
+        }
+    }
+}
+
+// 返回顶部
+#layout_up {
+    position: fixed;
+    cursor: pointer;
+    bottom: 102px;
+    right: 0;
+    display: none;
+}
+
+#floatIcon {
+    position: fixed;
+    top: auto;
+    bottom: 45px;
+    right: 0;
+    width: 56px;
+    height: 56px;
+}
+
+//底部 footer
+.component-navigation-footer {
+    background: #fceff3;
+    .footer_wrapper {
+        width: 1182px;
+        padding-top: 80px;
+        display: flex;
+        margin: 0 auto;
+        justify-content: space-around;
+        .content {
+            width: 131px;
+            .link-li {
+                padding-bottom: 22px;
+                font-size: 11px;
+                cursor: pointer;
+                a {
+                    color: #223628;
+                    text-decoration: none;
+                }
+            }
+            .link-li:first-child {
+                font-size: 14px;
+            }
+            img {
+                width: 70px;
+                height: 70px;
+            }
+            .link-sublevel-care {
+                margin-top: 18px;
+                line-height: 16px;
+            }
+        }
+    }
+    .footer_copyright {
+        font-size: 12px;
+        padding: 70px 0 30px;
+        text-align: center;
+        .footer-record {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 5px;
+            .record {
+                margin-right: 5px;
+            }
+            a {
+                color: #223628;
+                text-decoration: none;
+                display: inline-block;
+                img {
+                    vertical-align: bottom;
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 2px;
+                }
+                .lugong {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+    }
+    .footer_bc-img {
+        width: 100%;
+        background: url(https://img.katespade.cn/_nuxt/img/233376b.png) repeat-x;
+        background-size: contain;
+        height: 200px;
+    }
+}

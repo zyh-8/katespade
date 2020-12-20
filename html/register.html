@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户登录</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../commom/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../commom/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="../css/register.css">
+    <style>
+        body {
+            font-size: 12px;
+            line-height: 20px;
+            height: 100%;
+            color: #223628;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header -->
+    <div class="header">
+        <div class="header_wrapper">
+            <!-- pc -->
+            <div class="header-pc">
+                <div class="pc_header_top">
+                    <div class="header_top_left">
+                        <div class="search-store">查找门店</div>
+                    </div>
+                    <a class="header_top_logo" href="index.html">
+                        <img src="../static/img/logo.jpg" alt="">
+                    </a>
+                    <div class="header_top_right">
+                        <!-- 个人页面 -->
+                        <a href="login.html"><i class="iconfont icon-personal"></i></a>
+                        <!-- 购物车 -->
+                        <a href="car.html"><i class="iconfont icon-gouwu"></i></a>
+                    </div>
+                </div>
+                <div class="pc_header_bottom">
+                    <div class="menu">
+                        <div class="menu_wrapper">
+                            <div class="menu_wrapper_link">
+                                <a href="">新品</a>
+                                <!-- 二级菜单 -->
+                                <div class="menu-sublevel">
+                                    <div class="menu-sublevel__subCategories">
+                                        <div class="menu-sublevel-link"><a href="">全部新品</a></div>
+                                        <div class="menu-sublevel-link"><a href="">手袋</a></div>
+                                        <div class="menu-sublevel-link"><a href="">服饰</a></div>
+                                        <div class="menu-sublevel-link"><a href="">鞋履</a></div>
+                                        <div class="menu-sublevel-link"><a href="">首饰</a></div>
+                                        <div class="menu-sublevel-link"><a href="">配饰</a></div>
+                                        <div class="menu-sublevel-pic">
+                                            <div class="menu-sublevel-pic-wrap">
+                                                <a href=""><img src="../static/img/secongMenu_pic.jpg" alt=""></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="menu_wrapper_link">
+                                <a href="">手袋</a>
+                                <!-- 二级菜单 -->
+                                <div class="menu-sublevel">
+                                    <div class="menu-sublevel__subCategories">
+                                        <div class="menu-sublevel-link"><a href="">全部手袋</a></div>
+                                        <div class="menu-sublevel-link"><a href="">手袋</a></div>
+                                        <div class="menu-sublevel-link"><a href="">手袋</a></div>
+                                        <div class="menu-sublevel-link"><a href="">手袋</a></div>
+                                        <div class="menu-sublevel-link"><a href="">手袋</a></div>
+                                        <div class="menu-sublevel-link"><a href="">手袋</a></div>
+                                        <div class="menu-sublevel-link"><a href="">手袋</a></div>
+                                        <div class="menu-sublevel-link"><a href="">手袋</a></div>
+                                        <div class="menu-sublevel-pic">
+                                            <div class="menu-sublevel-pic-wrap">
+                                                <a href=""><img src="../static/img/secongMenu_pic1.jpg" alt=""></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu_wrapper_link">
+                                <a href="">服饰</a>
+                                <!-- 二级菜单 -->
+                                <div class="menu-sublevel">
+                                    <div class="menu-sublevel__subCategories">
+                                        <div class="menu-sublevel-link"><a href="">全部服饰</a></div>
+                                        <div class="menu-sublevel-link"><a href="">连衣裙</a></div>
+                                        <div class="menu-sublevel-link"><a href="">上装</a></div>
+                                        <div class="menu-sublevel-link"><a href="">下装</a></div>
+                                        <div class="menu-sublevel-link"><a href="">外套</a></div>
+                                        <div class="menu-sublevel-link"><a href="">时尚配饰</a></div>
+                                        <div class="menu-sublevel-pic">
+                                            <div class="menu-sublevel-pic-wrap">
+                                                <a href=""><img src="../static/img/secongMenu_pic2.jpg" alt=""></a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu_wrapper_link">
+                                <a href="">鞋履</a>
+                                <!-- 二级菜单 -->
+                                <div class="menu-sublevel">
+                                    <div class="menu-sublevel__subCategories">
+                                        <div class="menu-sublevel-link"><a href="">全部鞋履</a></div>
+                                        <div class="menu-sublevel-link"><a href="">休闲鞋</a></div>
+                                        <div class="menu-sublevel-link"><a href="">平底鞋</a></div>
+                                        <div class="menu-sublevel-link"><a href="">高跟鞋</a></div>
+                                        <div class="menu-sublevel-pic">
+                                            <div class="menu-sublevel-pic-wrap">
+                                                <a href=""><img src="../static/img/secongMenu_pic3.jpg" alt=""></a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu_wrapper_link">
+                                <a href="">首饰</a>
+                                <!-- 二级菜单 -->
+                                <div class="menu-sublevel">
+                                    <div class="menu-sublevel__subCategories">
+                                        <div class="menu-sublevel-link"><a href="">全部首饰</a></div>
+                                        <div class="menu-sublevel-link"><a href="">手链手镯</a></div>
+                                        <div class="menu-sublevel-link"><a href="">项链</a></div>
+                                        <div class="menu-sublevel-link"><a href="">耳环耳钉</a></div>
+                                        <div class="menu-sublevel-link"><a href="">戒指</a></div>
+                                        <div class="menu-sublevel-pic">
+                                            <div class="menu-sublevel-pic-wrap">
+                                                <a href=""><img src="../static/img/secongMenu_pic4.jpg" alt=""></a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu_wrapper_link">
+                                <a href="">配饰</a>
+                                <!-- 二级菜单 -->
+                                <div class="menu-sublevel">
+                                    <div class="menu-sublevel__subCategories">
+                                        <div class="menu-sublevel-link"><a href="">全部配饰</a></div>
+                                        <div class="menu-sublevel-link"><a href="">数码产品配件</a></div>
+                                        <div class="menu-sublevel-link"><a href="">钥匙扣</a></div>
+                                        <div class="menu-sublevel-link"><a href="">手表</a></div>
+                                        <div class="menu-sublevel-pic">
+                                            <div class="menu-sublevel-pic-wrap">
+                                                <a href=""><img src="../static/img/secongMenu_pic5.jpg" alt=""></a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu_wrapper_link">
+                                <a href="">热销推荐</a>
+                                <!-- 二级菜单 -->
+                                <div class="menu-sublevel">
+                                    <div class="menu-sublevel__subCategories">
+                                        <div class="menu-sublevel-link"><a href="">全部热销推荐</a></div>
+                                        <div class="menu-sublevel-link"><a href="">手袋</a></div>
+                                        <div class="menu-sublevel-link"><a href="">服饰</a></div>
+                                        <div class="menu-sublevel-link"><a href="">鞋履</a></div>
+                                        <div class="menu-sublevel-link"><a href="">首饰</a></div>
+                                        <div class="menu-sublevel-link"><a href="">配饰</a></div>
+                                        <div class="menu-sublevel-link"><a href="">优惠折上折</a></div>
+                                        <div class="menu-sublevel-pic">
+                                            <div class="menu-sublevel-pic-wrap">
+                                                <a href=""><img src="../static/img/secongMenu_pic6.jpg" alt=""></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search">
+                        <div class="search_btn">
+                            <p>搜索</p> <i class="iconfont icon-sousuo"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- 搜索框 -->
+                <div class="searchBox">
+                    <div class="inner-box">
+                        <!-- 输入框 -->
+                        <input type="text" id="keyword" class="select" autocomplete="off" placeholder="搜索产品名称、颜色、款式">
+                        <!-- 搜索按钮 -->
+                        <button class="searchBtn"><i class="iconfont icon-sousuo"></i></button>
+                    </div>
+                    <div id="search-form-content" class="search-form-content" style="max-height: 539px;">
+                        <div>
+                            <!---->
+                            <div class="component-search-recommand">
+                                <div class="component-search-recommand__title">搜索推荐</div>
+                                <div class="component-search-recommand__content">
+                                    <div class="component-search-recommand__content-item">nicola 桃心旋锁</div>
+                                    <div class="component-search-recommand__content-item">托特包</div>
+                                    <div class="component-search-recommand__content-item">margaux</div>
+                                    <div class="component-search-recommand__content-item">romy</div>
+                                    <div class="component-search-recommand__content-item">风琴包</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 用户注册 -->
+    <div class="page-register page-container">
+        <div class="container">
+            <!-- 注册 -->
+            <div class="register-content">
+                <!-- title -->
+                <div class="title-r">会员注册</div>
+                <!-- 注册表单 -->
+                <div class="register-form">
+                    <div class="form-container">
+                        <form class="phone-from-container" action="" method="post">
+                            <div class="form-container">
+                                <!-- 手机号 -->
+                                <div class="phone-content">
+                                    <div class="ks-input-container">
+                                        <input maxlength="11" placeholder="请输入您的手机号" type="text" class="ks-input" name="tel" id="tel">
+                                        <label for="" class="require-warning tel1">*请输入您的手机号</label>
+                                        <label for="" class="require-warning tel2">*手机号不正确</label>
+                                        <!---->
+
+                                    </div>
+                                </div>
+                                <!-- 密码验证 -->
+                                <div class="password-content">
+                                    <div class="ks-input-container">
+                                        <input placeholder="请输入您的账户密码" type="password" class="ks-input" id="password" name="password" autocomplete='password'>
+                                        <label for="" class="require-warning psw1">*请输入您的密码</label>
+                                        <label for="" class="require-warning psw2">*请输入正确格式(7个汉字或者14个英文以内的字节)</label>
+                                    </div>
+                                </div>
+                                <!-- 图片验证 -->
+                                <div class="draw-content">
+                                    <div class="area ">
+                                        <div class="draw-code">
+                                            <div class="ks-input-container">
+                                                <input placeholder="请输入图形验证码" type="text" class="ks-input" name="draw" id="code_input">
+                                                <label for="" class="require-warning draw1"></label>
+                                                <label for="" class="require-warning draw2">*图形验证码错误</label>
+                                                <!---->
+                                            </div>
+                                        </div>
+                                        <div id="picyzm"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </form>
+                        <button class="register-submit" id="btn">注册</button>
+                    </div>
+
+                </div>
+            </div>
+            <!-- 登录 -->
+            <div class="login-content">
+                <div class="title">登录账户</div>
+                <div class="login-form">
+                    <div class="introduce">请登录并查看您的账户</div>
+                    <div class="login-submit"><a href="login.html">登录</a></div>
+                    <div class="wechat-login">
+                        <div class="wechat-area">
+                            <div class="wechat-title">使用第三方平台登录</div>
+                            <div class="line"></div>
+                        </div>
+                        <img src="https://img.katespade.cn/_nuxt/img/964537d.png" class="icon-wechat"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 返回顶部 -->
+    <img id="layout_up" src="../static/img/layout-up.png" alt="返回顶部" class="" style="display: none;">
+    <img id="floatIcon" src="../static/img/online.gif " alt=" ">
+
+    <!-- 底部 footer -->
+    <div class="component-navigation-footer ">
+        <div class="footer_wrapper ">
+            <div class="content ">
+                <div>
+                    <div class="link-li ">
+                        <div class="link "><a class="link-sublevel ">网站与门店</a></div>
+                    </div>
+                    <div class="link-li ">
+                        <div class="link-sub "><a class="link-sublevel ">查找门店</a></div>
+                    </div>
+                    <div class="link-li ">
+                        <div class="link-sub "><a class="link-sublevel ">网站导航</a></div>
+                    </div>
+                    <div class="link-li ">
+                        <div class="link-sub "><a class="link-sublevel ">使用条款</a></div>
+                    </div>
+                    <div class="link-li ">
+                        <div class="link-sub "><a class="link-sublevel ">安全与隐私</a></div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="content ">
+                <div>
+                    <div class="link-li ">
+                        <div class="link "><a class="link-sublevel ">客户服务</a></div>
+                    </div>
+                    <div class="link-li ">
+                        <div class="link-sub "><a class="link-sublevel ">关于订单</a></div>
+                    </div>
+                    <div class="link-li ">
+                        <div class="link-sub "><a class="link-sublevel ">品类保养与维修</a></div>
+                    </div>
+                    <div class="link-li ">
+                        <div class="link-sub "><a class="link-sublevel ">vip俱乐部</a></div>
+                    </div>
+                    <div class="link-li ">
+                        <div class="link-sub "><a class="link-sublevel ">联系我们</a></div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="content ">
+                <div>
+                    <div class="link-li ">
+                        <div class="link "><a class="link-sublevel ">关于我们</a></div>
+                    </div>
+                    <div class="link-li ">
+                        <div class="link-sub "><a class="link-sublevel ">品牌故事</a></div>
+                    </div>
+                    <div class="link-li ">
+                        <div class="link-sub "><a class="link-sublevel ">品牌保护</a></div>
+                    </div>
+                    <div class="link-li ">
+                        <div class="link-sub "><a class="link-sublevel ">全球商业诚信计划</a></div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="content ">
+                <div>
+                    <div class="link-li ">
+                        <div class="link link-hidden "><a href=" " class="link-sublevel">关注我们</a> </div>
+                    </div>
+                    <div class="link-li ">
+                        <div class="link-sub link-hidden "><a href=" " class="link-sublevel">官方微博</a></div>
+                    </div>
+                    <div class="link-li ">
+                        <div class="link-sub link-hidden "><a href=" " class="clink-sublevel">官方微信</a></div>
+                    </div>
+                    <div class="link-li ">
+                        <img src="https://img.katespade.cn/media/WechatIMG96.png " alt="kate spade " class="wechat-img ">
+                        <p class="link-sublevel-care link-sublevel-pc ">
+                            关注katespade官方微信获取电子会员卡及微信专属礼遇
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_copyright ">
+            本网站产品零售价仅供参考，最终售价以实际结算标价为准。
+            <div class="footer-record ">
+                <a href=" " class="record ">沪ICP备12018007号-1</a>
+                <a href=" " target="_blank ">
+                    <img src="../../static/img/footer-record01.png" class="license">上海工商
+                </a>
+            </div>
+            <div class="footer-record ">
+                <a href=" ">
+                    <img src="../../static/img/footer-record02.png" alt=" " class="lugong"> 沪公网备31010402005220
+                </a>
+            </div>
+        </div>
+        <div class="footer_bc-img "><img src=" " alt=" "></div>
+    </div>
+    <script src="../js/utils.js"></script>
+    <script src="../commom/jquery/jquery.min.js"></script>
+    <script src="../js/cookie.js"></script>
+    <script src="../js/ajax.js"></script>
+    <script src="../js/gverify.js"></script>
+    <script src="../js/register.js"></script>
+
+</body>
+
+</html>
